@@ -27,6 +27,7 @@ model User {
   profile      UserProfile?
   roles        UserRole[]
   accounts     Account[]
+  assignedTasks Task[]
 
   @@index([email])
 }
@@ -66,12 +67,13 @@ model Account {
 }
 
 model Task {
-  id        Int      @id @default(autoincrement())
-  title     String
-  done      Boolean  @default(false)
-  createdAt DateTime @default(now())	
+  id          Int      @id @default(autoincrement())
+  title       String
+  done        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  assignedToId Int?
+  assignedTo   User?    @relation(fields: [assignedToId], references: [id], onDelete: SetNull)
 
   @@index([done, createdAt])
-
+  @@index([assignedToId])
 }
-
