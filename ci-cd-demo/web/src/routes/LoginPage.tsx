@@ -3,6 +3,8 @@ import type { FormEvent } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/useAuth';
 
+import { useEffect } from 'react';
+
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,6 +30,10 @@ export default function LoginPage() {
     }
   };
 
+  useEffect(() => {
+    document.title = 'Vite + React';
+  }, []);
+
   return (
     <div className="min-h-[calc(100vh-200px)] flex items-center justify-center" style={{ padding: '0 16px' }}>
       <div className="w-full max-w-md">
@@ -44,6 +50,7 @@ export default function LoginPage() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
