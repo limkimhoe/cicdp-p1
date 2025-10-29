@@ -16,3 +16,5 @@ yarn-error.log*
 Thumbs.db
 
 practical-Copy/
+playwright-report/
+test-results/

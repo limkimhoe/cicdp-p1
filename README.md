@@ -1,5 +1,6 @@
 # cicdp-p1
 - Practical 1
+- Node 20.19.0, NPM 11.6.2
 - Setup Git
     1. SSH Key Setup
         - $ ssh-keygen -t ed25519 -C "YOUR EMAIL ADDRESS"
@@ -16,3 +17,8 @@
         - git add remote
         - checkout to newly added main branch
         - make changes, add commit and sync  
+
+- Testing
+    1. npm run e2e
+    2. npm run e2e:dev
+    3. npx playwright show-report --host 0.0.0.0
