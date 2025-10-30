@@ -15,5 +15,10 @@
         - git init
         - git add remote
         - checkout to newly added main branch
+<<<<<<< HEAD
         - make changes, add commit and sync
         - extra contents...
+=======
+        - make changes, add commit and sync 
+        - my changes 
+>>>>>>> Updates/README.md/mychanges
