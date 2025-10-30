@@ -15,4 +15,5 @@
         - git init
         - git add remote
         - checkout to newly added main branch
-        - make changes, add commit and sync  
+        - make changes, add commit and sync 
+        - my changes 
