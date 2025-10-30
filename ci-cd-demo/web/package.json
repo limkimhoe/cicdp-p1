@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview --port 5173",
     "e2e": "dotenv -e .env.test -- playwright test",
-    "e2e:dev": "dotenv -e .env.development -- playwright test",
+    "e2e:dev": "dotenv -e .env.development -- playwright test --workers=1",
     "e2e:report": "playwright show-report"
   },
   "dependencies": {
